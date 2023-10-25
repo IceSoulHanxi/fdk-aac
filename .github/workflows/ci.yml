@@ -146,9 +146,8 @@ jobs:
         run: |
           cmake . -B build -DBUILD_PROGRAMS=YES
           cmake --build build --config Release
-            - name: Upload a Build Artifact
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3.1.2
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3
         with:
           name: msvc-cmake
           path: build/
